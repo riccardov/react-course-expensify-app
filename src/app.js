@@ -21,28 +21,6 @@ store.subscribe(() => {
   const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
 });
 
-store.dispatch(addExpense({
-  description: 'water bill',
-  amount: 100,
-  createdAt: 1000
-}));
-
-store.dispatch(addExpense({
-  description: 'internet bill',
-  amount: 300,
-  createdAt: -10000
-}));
-
-store.dispatch(addExpense({
-  description: 'gas bill',
-  amount: 200,
-  createdAt: 100000
-}));
-
-store.dispatch(setTextFilter(''));
-
-store.dispatch(sortByAmount());
-
 const jsx = (
   <Provider store={store}>
     <AppRouter />
