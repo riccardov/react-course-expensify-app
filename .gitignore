@@ -1,4 +1,6 @@
 node_modules/
-yarn-error.log
 .vscode/
 public/dist/
+yarn-error.log
+.env.development
+.env.test

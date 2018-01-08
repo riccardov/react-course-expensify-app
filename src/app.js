@@ -9,10 +9,10 @@ import { setTextFilter, setStartDate, setEndDate, sortByDate, sortByAmount } fro
 import getVisibleExpenses from './selectors/expenses';
 import expensesReducer from './reducers/expenses';
 import filtersReducer from './reducers/filters';
-
 import 'normalize.css/normalize.css'
 import './styles/style.scss';
 import 'react-dates/lib/css/_datepicker.css';
+import './firebase/firebase';
 
 const store = configureStore();
 
