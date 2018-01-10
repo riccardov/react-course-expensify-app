@@ -16,8 +16,6 @@ import database from '../../firebase/firebase';
 const createMockStore = configureMockStore([thunk]);
 
 beforeEach((done) => {
-  jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
-  
   const expensesData = {};
   expenses.forEach(({ id, description, note, amount, createdAt }) => {
     expensesData[id] = { description, note, amount, createdAt };
