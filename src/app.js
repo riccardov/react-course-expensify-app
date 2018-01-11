@@ -14,7 +14,7 @@ import 'normalize.css/normalize.css'
 import './styles/style.scss';
 import 'react-dates/lib/css/_datepicker.css';
 import { firebase } from './firebase/firebase';
-
+import LoadingPage from './components/LoadingPage';
 const store = configureStore();
 let hasRendered = false;
 const jsx = (
@@ -36,12 +36,11 @@ store.subscribe(() => {
 });
 
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     store.dispatch(login(user.uid));
-    console.log('uid', user.uid);
     store.dispatch(startSetExpenses()).then(() => {
       renderApp();
       if (history.location.pathname === '/') {
