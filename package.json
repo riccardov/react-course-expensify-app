@@ -32,7 +32,7 @@
     "normalize.css": "^7.0.0",
     "numeral": "^2.0.6",
     "raf": "^3.4.0",
-    "react": "^16.1.1",
+    "react": "^16.2",
     "react-addons-shallow-compare": "^15.6.2",
     "react-dates": "^15.3.0",
     "react-dom": "^16.1.1",
